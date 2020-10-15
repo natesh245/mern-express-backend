@@ -31,14 +31,16 @@ mongoose.connect(
 //     default: Date.now, // 3 hours from now
 //   },
 // });
+var date = new Date();
+var dateString = date.toDateString();
 
 const todoSchema = new Schema({
   title: String,
   description: String,
 
   created: {
-    type: Date,
-    default: Date.now, // 3 hours from now
+    type: String,
+    default: dateString,
   },
 });
 
