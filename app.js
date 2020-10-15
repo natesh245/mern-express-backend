@@ -9,6 +9,9 @@ const { Schema } = mongoose;
 
 //create an express app
 const app = express();
+const cors = require("cors");
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
@@ -94,7 +97,7 @@ app.delete("/todos/:todoId", async (req, res) => {
   res.send("delete successful");
 });
 
-//use port 3000 to listen to icoming requests
-app.listen(3000, () => {
-  console.log(`Example app listening at http://localhost:3000/todos`);
+//use port 4000 to listen to icoming requests
+app.listen(4000, () => {
+  console.log(`Example app listening at http://localhost:4000/todos`);
 });
